@@ -1,0 +1,158 @@
+body {
+  font-size: 16px !important;
+  color: #141414; }
+
+@media (min-width: 38em) {
+  body {
+    font-size: 18px; } }
+.banner {
+  background: url(https://placehold.it/1320x1000) no-repeat;
+  background-size: cover; }
+
+.noticias {
+  /*padding: 50px 0;*/
+  margin: 30px 0;
+  border-right: 2px solid #fff; }
+  .noticias ul {
+    margin: 0;
+    font-size: 0;
+    padding: 0; }
+  .noticias li {
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1em; }
+
+* {
+  box-sizing: border-box; }
+
+.banner {
+  height: 80vh; }
+
+.media {
+  height: 80vh; }
+
+.banner {
+  background: url(../../assets/imgs/banner-mike.jpg);
+  background-size: cover;
+  background-position: center; }
+
+.quote {
+  height: 40vh; }
+  .quote blockquote {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 1em;
+    font-size: 1.5em;
+    height: inherit; }
+    .quote blockquote:before {
+      display: absolute;
+      content: "\201C";
+      font-size: 2em;
+      color: #7a7a7a; }
+    @media (min-width: 38em) {
+      .quote blockquote {
+        font-size: 2em; } }
+  .quote cite {
+    font-size: 1em;
+    float: right;
+    line-height: 1em;
+    margin: 20px; }
+    @media (min-width: 38em) {
+      .quote cite {
+        font-size: 1.2em; } }
+
+.content-wrapper {
+  padding: 0 30px; }
+  @media (min-width: 38em) {
+    .content-wrapper {
+      padding: 0 60px; } }
+
+.nav {
+  /*background: #FF5722;*/
+  background: #FFF;
+  position: fixed; }
+  .nav h3 {
+    padding: 20px;
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px solid #141414;
+    color: #141414; }
+  .nav ul {
+    list-style: none;
+    padding: 0; }
+  .nav a {
+    font-size: 1.5em;
+    display: block;
+    color: #727272;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700; }
+    .nav a:hover {
+      /*background: #fff;*/
+      color: #141414; }
+    .nav a:active {
+      color: #00D667; }
+
+.menu-btn {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 20px;
+  background: url(../../assets/icons/btn-open.png) no-repeat;
+  background-size: cover;
+  width: 42px;
+  height: 42px;
+  cursor: pointer; }
+  .menu-btn.btn--closed {
+    background: url(../../assets/icons/btn-close.png) no-repeat;
+    background-size: cover; }
+
+.nav--left {
+  left: -240px; }
+  .nav--left.nav-open--left {
+    left: 0px; }
+
+.nav--top {
+  top: -240px; }
+  .nav--top.nav-open--top {
+    left: 0px; }
+
+.nav--vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000; }
+
+.nav--horizontal {
+  height: 240px;
+  width: 100%;
+  z-index: 1000; }
+
+/* push classes aplied to the body */
+.nav--push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0; }
+
+.nav--push-to-right {
+  left: 240px; }
+
+.nav--push-to-bottom {
+  top: 240px; }
+
+/* transitions */
+.nav,
+.nav--push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+@media screen and (max-height: 26.375em) {
+  .nav--left,
+  .nav--push-to-left {
+    left: -190px; } }
+
+/*# sourceMappingURL=style.css.map */
