@@ -13,7 +13,11 @@
 }
 
 .quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40vh;
+  
   blockquote{
     padding: 0;
     margin: 0;
@@ -51,16 +55,15 @@
   background: #FFF;
   position: fixed;
   
-
   h3{
-    padding: 20px;
-    margin: 0;
+    display: inline-block;
+    margin-left: 80px;
     font-size: 2em;
     text-align: center;
     border-bottom: 1px solid #141414;
     color: #141414;
   }
-  ul { list-style: none; padding: 0; }
+  ul { list-style: none; padding: 0; margin-top: 100px; }
   a{
     font-size: 1.5em;
     display: block;
@@ -73,8 +76,9 @@
       color: #141414;
     }
 
-    &:active{
-      color: #00D667;
+    &.active{
+      color: #141414;
+      text-decoration: underline;
     }
   }
 
@@ -82,20 +86,51 @@
 
 }
 
-.menu-btn{
+.open-menu-btn{
   position: relative;
   display: block;
   float: left;
+  left: 80px;
+  top: 10px;
   margin: 20px;
   background: url(../../assets/icons/btn-open.png) no-repeat;
   background-size: cover;
   width: 42px;
   height: 42px;
   cursor: pointer;
-  &.btn--closed {
-    background: url(../../assets/icons/btn-close.png) no-repeat;
-    background-size: cover;
+  transition: left 0.3s ease-in-out;
+  &.btn--push-to-right{
+    left: 240px;
   }
+  &.btn--closed {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.4s, opacity 0.4s, left 0.25s ease-in-out;
+  }
+
+}
+
+.close-menu-btn{
+  position: absolute;
+  /*display: inline-block;*/
+  /*float: right;*/
+  /*margin: 20px;*/
+  right: -15px;
+  top: 30px;
+  background: url(../../assets/icons/btn-close.png) no-repeat;
+  background-size: cover;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  &.btn--closed {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  }
+  
 }
 
 .nav--left {
@@ -135,9 +170,9 @@
   left: 0;
 }
 
-.nav--push-to-right {
+/*.nav--push-to-right {
   left: 240px;
-}
+}*/
 
 .nav--push-to-bottom {
   top: 240px;
